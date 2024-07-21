@@ -5,7 +5,7 @@
 SPHINXOPTS    ?=
 SPHINXBUILD   ?= sphinx-build
 SOURCEDIR     =
-BUILDDIR      = _build
+BUILDDIR      = build
 
 help:
 	@echo "\x1b[31m"
@@ -26,4 +26,4 @@ clean-html: clean html
 
 
 clean:
-	-@rm -r docs/_build
+	-@rm -r docs/build
