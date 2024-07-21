@@ -9,7 +9,7 @@ wheels/
 *.egg
 
 # Sphinx documentation
-docs/_build/
+docs/build/
 
 # Environments
 .venv*
