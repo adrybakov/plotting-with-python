@@ -8,7 +8,7 @@ In this page we collected useful links, short tutorials about Python syntax and 
 examples and exercises.
 
 
-.. toctree:
+.. toctree::
   :maxdepth: 2
 
   installation

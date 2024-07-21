@@ -4,4 +4,4 @@
 Syntax
 ******
 
-#TODO
+Before we move to the daa handling with numpy and 

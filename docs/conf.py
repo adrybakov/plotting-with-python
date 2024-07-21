@@ -28,41 +28,38 @@ from os.path import abspath
 sys.path.insert(0, abspath("."))
 
 
-# Project information
+##########################################################################################
+##                                   Project metadata                                   ##
+##########################################################################################
+
 version = "alpha"
 project = "Plotting with Python"
 author = "Andrey Rybakov"
 copyright = f"2024-{datetime.now().year}, {author}"
 
 
-# Extentions
+##########################################################################################
+##                                      Extensions                                      ##
+##########################################################################################
 extensions = [
-    "sphinx.ext.duration",
-    "sphinx.ext.autodoc",
-    "sphinx.ext.autosummary",
-    "sphinx.ext.viewcode",
-    "sphinx.ext.extlinks",
-    "sphinx_copybutton",
-    "sphinx.ext.intersphinx",
+    "sphinx.ext.duration",  # Measure the time of the build
+    "sphinx.ext.extlinks",  # Markup to shorten external links
+    "sphinx_copybutton",  # Copybutton for the blocks
+    "sphinx.ext.intersphinx",  # Link to other projects’ documentation
 ]
 
-autosummary_generate = True
-autodoc_member_order = "alphabetical"
+##########################################################################################
+##                                  Build configuration                                 ##
+##########################################################################################
 
 smartquotes = False
-
-# Extlinks
-extlinks = {}
-
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ["_templates"]
 
-# Options for HTML output
-
-# The theme to use for HTML and HTML Help pages.  See the documentation for
-# a list of builtin themes.
-
+##########################################################################################
+##                                Options for HTML output                               ##
+##########################################################################################
 html_theme = "furo"
 html_static_path = ["_static"]
 html_css_files = ["plotting-with-python.css"]
@@ -106,12 +103,10 @@ html_theme_options = {
     ],
 }
 
-# fix problem with autosummary and numpydoc:
-numpydoc_show_class_members = False
 
-
-# Custom variables with access from .rst files and docstrings
-
+##########################################################################################
+##              Custom variables with access from .rst files and docstrings             ##
+##########################################################################################
 variables_to_export = [
     "project",
     "copyright",
@@ -124,10 +119,33 @@ rst_epilog = "\n".join(
 )
 del frozen_locals
 
-# Custom substitutions for links. Solution source:
+##########################################################################################
+##                                Dynamic external links                                ##
+##########################################################################################
+# Usage :numpy:`ndarray`
+extlinks = {
+    "numpy": (
+        "https://numpy.org/doc/stable/reference/generated/numpy.%s.html",
+        "numpy.%s",
+    ),
+    "matplotlib": (
+        "https://matplotlib.org/stable/api/%s_api.html",
+        "matplotlib.%s",
+    ),
+}
+
+##########################################################################################
+##                                 Static external links                                ##
+##########################################################################################
+
+# Solution source:
 # https://docutils.sourceforge.io/docs/ref/rst/directives.html#directives-for-substitution-definitions
+# Usage: |Python|_
 custom_links = {
-    "pre-commit": ("pre-commit", "https://pre-commit.com"),
+    "Python": ("Python", "https://python.org"),
+    "NumPy": ("NumPy", "https://numpy.org/"),
+    "SciPy": ("SciPy", "https://scipy.org/"),
+    "matplotlib": ("matplotlib", "https://matplotlib.org/"),
 }
 
 rst_epilog += "\n".join(
