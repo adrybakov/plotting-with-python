@@ -1,0 +1,21 @@
+
+__pycache__/
+
+# Distribution / packaging
+build/
+dist/
+wheels/
+*.egg-info/
+*.egg
+
+# Sphinx documentation
+docs/_build/
+
+# Environments
+.venv*
+
+# MacOS
+.DS_Store
+
+# VScode
+.vscode
