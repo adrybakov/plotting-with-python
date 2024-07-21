@@ -4,4 +4,7 @@
 Exercises
 *********
 
-#TODO
+.. toctree::
+    :caption: NumPy basics
+
+    numpy/basics

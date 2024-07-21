@@ -12,6 +12,7 @@ examples and exercises.
   :maxdepth: 2
 
   installation
-  syntax/index
-  examples/index
+  syntax
+  numpy-summary
+  matplotlib-summary/index
   exercises/index
