@@ -1,0 +1,7 @@
+.. _exercises:
+
+*********
+Exercises
+*********
+
+#TODO

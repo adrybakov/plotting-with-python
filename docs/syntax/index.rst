@@ -1,0 +1,7 @@
+.. _syntax:
+
+******
+Syntax
+******
+
+#TODO
