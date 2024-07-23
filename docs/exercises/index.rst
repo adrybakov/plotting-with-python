@@ -13,3 +13,13 @@ Exercises
   :caption: ax.plot()
 
   matplotlib/plot/index
+
+.. toctree::
+  :caption: ax.imshow()
+
+  matplotlib/imshow/index
+
+.. toctree::
+  :caption: ax.scatter()
+
+  matplotlib/scatter/index
