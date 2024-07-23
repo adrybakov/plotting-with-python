@@ -82,7 +82,7 @@ Creation of an array
     # Linearly distributed 100 values between -2 and 10
     linear_array = np.linspace(-2, 10, 100)
     # Logarithmically distributed 100 values between -2 and 10
-    log_array = np.linspace(-2, 10, 100)
+    log_array = np.logspace(-2, 10, 100)
     # two-dimensional array of 100 zeros
     zero_array = np.zeros((20, 5))
     # two-dimensional array of 100 ones
