@@ -177,20 +177,102 @@ Decoration of ``ax``
 Labels
 ------
 
+.. code-block:: python
+
+  # Here we can set labels for x and y axis
+  ax.set_xlabel("T (K)", fontsize=20)
+  ax.set_ylabel(R"$\alpha$ (K)", fontsize=15)
+
+.. image:: labels.png
+
 Legend
 ------
+
+In order to add legend to the plot you need to pass additional keyword argument
+to the plotting function:
+
+
+.. code-block:: python
+
+  import numpy as np
+  import matplotlib.pyplot as plt
+
+  fig, ax = plt.subplots()
+
+  x1 = np.linspace(-6, 6, 1000)
+  y1 = np.cos(x1)
+
+  x2 = np.linspace(-6, 6, 20)
+  y2 = np.sin(x2)
+
+  ax.plot(x1, y1, "--", lw=1, color="tab:red", label="cos(x)")
+  ax.plot(x2, y2, "o-", lw=3, alpha=0.5, label="sin(x)")
+
+  # Next line add a legend to the figure
+  ax.legend(loc="lower left", fontsize=15, frameon=True)
+
+.. image:: legend.png
 
 Ticks
 -----
 
-Colorbar
---------
+.. code-block:: python
+
+  ax.set_xticks(ticks=[-np.pi, 0, np.pi], labels=["$-\pi$","0","$\pi$"])
+  ax.tick_params(axis="y", labelsize=15, direction="in")
+
+
+.. image:: ticks.png
 
 Title
 -----
 
+.. code-block:: python
+
+  ax.set_title("Trigonometric functions", fontsize="30")
+
+.. image:: title.png
+
 Text
 ----
+
+.. code-block:: python
+
+  ax.text(-4, -0.75, "In data\ncoordinates", va="center", ha="center")
+  ax.text(0.9, 0.9, "In relative\n coordinates", transform=ax.transAxes, va="top")
+
+Colorbar
+--------
+
+.. code-block:: python
+
+  import numpy as np
+  import matplotlib.pyplot as plt
+  # This import is necessary for colorbar placing
+  from mpl_toolkits.axes_grid1 import make_axes_locatable
+
+  fig, ax = plt.subplots()
+
+  x = np.linspace(-np.pi/2, np.pi/2, 1000)
+  y = np.linspace(-np.pi, np.pi, 1000)
+
+  x,y = np.meshgrid(x,y)
+
+  z = np.cos(x) + np.sin(y)
+
+  # First we need to catch our image into a variable
+  im = ax.imshow(z, origin="lower", cmap="bwr", extent=[-np.pi/2, np.pi/2, -np.pi, np.pi])
+
+  # create an axes on the right side of ax. The width of cax will be 5%
+  # of ax and the padding between cax and ax will be fixed at 0.05 inch.
+  divider = make_axes_locatable(ax)
+  cax = divider.append_axes("right", size="5%", pad=0.05)
+    
+  plt.colorbar(im, cax=cax)
+
+
+
+.. image:: colorbar.png
 
 Saving the picture
 ==================

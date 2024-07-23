@@ -5,6 +5,11 @@ Exercises
 *********
 
 .. toctree::
-    :caption: NumPy basics
+  :caption: NumPy basics
 
-    numpy/basics
+  numpy/basics
+
+.. toctree::
+  :caption: ax.plot()
+
+  matplotlib/plot/index
