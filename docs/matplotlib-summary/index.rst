@@ -177,6 +177,10 @@ Decoration of ``ax``
 Labels
 ------
 
+|ax-set-xlabel|_
+
+|ax-set-ylabel|_
+
 .. code-block:: python
 
   # Here we can set labels for x and y axis
@@ -187,6 +191,8 @@ Labels
 
 Legend
 ------
+
+|ax-legend|_
 
 In order to add legend to the plot you need to pass additional keyword argument
 to the plotting function:
@@ -216,6 +222,10 @@ to the plotting function:
 Ticks
 -----
 
+|ax-set-ticks|_
+
+|ax-ticks-params|_
+
 .. code-block:: python
 
   ax.set_xticks(ticks=[-np.pi, 0, np.pi], labels=["$-\pi$","0","$\pi$"])
@@ -227,6 +237,8 @@ Ticks
 Title
 -----
 
+|ax-set-title|_
+
 .. code-block:: python
 
   ax.set_title("Trigonometric functions", fontsize="30")
@@ -235,6 +247,8 @@ Title
 
 Text
 ----
+
+|ax-text|_
 
 .. code-block:: python
 

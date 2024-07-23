@@ -203,6 +203,34 @@ custom_links = {
         "ax.imshow()",
         "https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.imshow.html",
     ),
+    "ax-set-xlabel": (
+        "ax.set_xlabel()",
+        "https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.set_xlabel.html",
+    ),
+    "ax-set-ylabel": (
+        "ax.set_ylabel()",
+        "https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.set_ylabel.html",
+    ),
+    "ax-legend": (
+        "ax.legend()",
+        "https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.legend.html",
+    ),
+    "ax-set-ticks": (
+        "ax.set_ticks()",
+        "https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.set_ticks.html",
+    ),
+    "ax-ticks-params": (
+        "ax.ticks_params()",
+        "https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.ticks_params.html",
+    ),
+    "ax-set-title": (
+        "ax.set_title()",
+        "https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.set_title.html",
+    ),
+    "ax-text": (
+        "ax.text()",
+        "https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.text.html",
+    ),
 }
 
 rst_epilog += "\n".join(
