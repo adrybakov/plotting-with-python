@@ -5,6 +5,11 @@ Exercises
 *********
 
 .. toctree::
+  :caption: Python basics
+
+  python
+
+.. toctree::
   :caption: NumPy basics
 
   numpy/basics
